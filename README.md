@@ -1,6 +1,6 @@
 <div align="center">
 
-# Kinect360Viewer
+# KinectForge
 
 **Real-time 3D point cloud viewer for Xbox Kinect 360**
 
@@ -18,7 +18,7 @@ GPU-accelerated rendering · cyberspace effects · plugin system · built-in pro
 
 ## Overview
 
-Kinect360Viewer transforms an Xbox Kinect 360 sensor into a real-time 3D point cloud viewer. The entire depth-to-point-cloud pipeline runs on the GPU via OpenGL 4.3 compute shaders — no CPU-side geometry building, no VBO upload stalls, no blocking GPU readbacks.
+KinectForge transforms an Xbox Kinect 360 sensor into a real-time 3D point cloud viewer. The entire depth-to-point-cloud pipeline runs on the GPU via OpenGL 4.3 compute shaders — no CPU-side geometry building, no VBO upload stalls, no blocking GPU readbacks.
 
 The viewer includes 20+ visual effects (cyberspace mode, ghost particles, particle trails, bloom, chromatic aberration), depth filters, color palettes, a preset system, a built-in performance profiler, and an extensible plugin architecture.
 
@@ -373,7 +373,7 @@ Kinect 360 (30 FPS)
 ## Project Structure
 
 ```
-Kinect360Viewer/
+KinectForge/
 │
 ├── main.py              Application class, GLFW window, main loop
 ├── app_state.py         AppState dataclass (replaces 30+ globals)

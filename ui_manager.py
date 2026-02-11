@@ -134,7 +134,7 @@ class UIManager:
         imgui.push_style_color(
             imgui.COLOR_FRAME_BACKGROUND, 0.20, 0.20, 0.20, 1.0)
 
-        imgui.begin("KINECT 360  Settings")
+        imgui.begin("KinectForge Settings")
 
         self._draw_depth_section(state, kinect, cb)
         self._draw_resolution_section(state, kinect, renderer, cb)

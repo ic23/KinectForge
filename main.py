@@ -1,5 +1,5 @@
 # =============================
-# Kinect 360 3D Viewer — Application
+# KinectForge 3D Viewer — Application
 # =============================
 """
 Refactored entry point.
@@ -97,7 +97,7 @@ class Application:
         glfw.window_hint(glfw.OPENGL_PROFILE, glfw.OPENGL_CORE_PROFILE)
 
         self.window = glfw.create_window(
-            1280, 720, "Kinect 360 3D", None, None)
+            1280, 720, "KinectForge 3D", None, None)
         if not self.window:
             glfw.terminate()
             self.kinect.close()
