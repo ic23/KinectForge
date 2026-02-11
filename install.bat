@@ -3,7 +3,7 @@
 chcp 65001>nul
 
 echo ========================================
-echo Setting up Python 3.10 environment for KinectForge
+echo Setting up Python 3.10 environment for KinectPyEffects
 echo ========================================
 echo.
 

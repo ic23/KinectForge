@@ -3,7 +3,7 @@
 chcp 65001>nul
 
 echo ========================================
-echo Running KinectForge using the virtual environment
+echo Running KinectPyEffects using the virtual environment
 echo ========================================
 echo.
 
