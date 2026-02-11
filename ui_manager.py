@@ -116,6 +116,9 @@ class UIManager:
     def draw(self, state, camera, kinect, gpu, renderer,
              plugin_mgr, app_ctx, now, w, h, metrics=None):
         """Draw all ImGui panels.  Delegates to _draw_*() sub-methods."""
+        if not state.show_ui:
+            return
+
         pm = plugin_mgr
         ac = app_ctx
         cb = lambda l, k: self._checkbox(l, k, pm, ac)
@@ -134,7 +137,7 @@ class UIManager:
         imgui.push_style_color(
             imgui.COLOR_FRAME_BACKGROUND, 0.20, 0.20, 0.20, 1.0)
 
-        imgui.begin("KinectForge Settings")
+        imgui.begin("KinectPyForge Settings")
 
         self._draw_depth_section(state, kinect, cb)
         self._draw_resolution_section(state, kinect, renderer, cb)
@@ -152,7 +155,7 @@ class UIManager:
         pm.call_draw_ui(ac)
 
         imgui.separator()
-        imgui.text("ESC - quit | F11 - fullscreen")
+        imgui.text("ESC - quit | F10 - toggle UI | F11 - fullscreen")
         imgui.text("F12 - screenshot | Home - reset cam")
         imgui.text("P - export PLY")
         imgui.text("LMB - orbit | RMB - pan | Scroll - zoom")

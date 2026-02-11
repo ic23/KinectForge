@@ -54,6 +54,10 @@ class AppState:
     is_fullscreen: bool = False
     f11_was_pressed: bool = False
 
+    # ── UI visibility ──
+    show_ui: bool = True
+    f10_was_pressed: bool = False
+
     # ── Camera / mouse ──
     last_mx: float = 0.0
     last_my: float = 0.0

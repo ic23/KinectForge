@@ -1,5 +1,5 @@
 # =============================
-# KinectForge 3D Viewer — Application
+# KinectPyForge 3D Viewer — Application
 # =============================
 """
 Refactored entry point.
@@ -97,7 +97,7 @@ class Application:
         glfw.window_hint(glfw.OPENGL_PROFILE, glfw.OPENGL_CORE_PROFILE)
 
         self.window = glfw.create_window(
-            1280, 720, "KinectForge 3D", None, None)
+            1280, 720, "KinectPyForge 3D", None, None)
         if not self.window:
             glfw.terminate()
             self.kinect.close()
@@ -346,6 +346,12 @@ class Application:
     def _handle_hotkeys(self, now):
         s = self.state
         w = self.window
+
+        # F10 — toggle UI
+        f10 = glfw.get_key(w, glfw.KEY_F10) == glfw.PRESS
+        if f10 and not s.f10_was_pressed:
+            s.show_ui = not s.show_ui
+        s.f10_was_pressed = f10
 
         # F11 — fullscreen
         f11 = glfw.get_key(w, glfw.KEY_F11) == glfw.PRESS

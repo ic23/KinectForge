@@ -1,6 +1,6 @@
 <div align="center">
 
-# KinectForge
+# KinectPyForge
 
 **Real-time 3D point cloud viewer for Xbox Kinect 360**
 
@@ -18,7 +18,7 @@ GPU-accelerated rendering · cyberspace effects · plugin system · built-in pro
 
 ## Overview
 
-KinectForge transforms an Xbox Kinect 360 sensor into a real-time 3D point cloud viewer. The entire depth-to-point-cloud pipeline runs on the GPU via OpenGL 4.3 compute shaders — no CPU-side geometry building, no VBO upload stalls, no blocking GPU readbacks.
+KinectPyForge transforms an Xbox Kinect 360 sensor into a real-time 3D point cloud viewer. The entire depth-to-point-cloud pipeline runs on the GPU via OpenGL 4.3 compute shaders — no CPU-side geometry building, no VBO upload stalls, no blocking GPU readbacks.
 
 The viewer includes 20+ visual effects (cyberspace mode, ghost particles, particle trails, bloom, chromatic aberration), depth filters, color palettes, a preset system, a built-in performance profiler, and an extensible plugin architecture.
 
@@ -111,6 +111,7 @@ The application opens an interactive 3D viewport with a control panel on the lef
 | <kbd>RMB</kbd> + drag | Pan camera |
 | Scroll wheel | Zoom in/out |
 | <kbd>Home</kbd> | Reset camera to default |
+| <kbd>F10</kbd> | Toggle UI visibility |
 | <kbd>F11</kbd> | Toggle fullscreen |
 | <kbd>F12</kbd> | Capture screenshot (PNG, no UI overlay) |
 | <kbd>P</kbd> | Export point cloud to PLY |
@@ -373,7 +374,7 @@ Kinect 360 (30 FPS)
 ## Project Structure
 
 ```
-KinectForge/
+KinectPyForge/
 │
 ├── main.py              Application class, GLFW window, main loop
 ├── app_state.py         AppState dataclass (replaces 30+ globals)
