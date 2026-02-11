@@ -1,14 +1,14 @@
 @echo off
-:: UTF-8 для консоли
+:: UTF-8 for console
 chcp 65001>nul
 
 echo ========================================
-echo Запуск main.py через виртуальное окружение
+echo Running KinectForge using the virtual environment
 echo ========================================
 echo.
 
 if not exist "kinect_env\Scripts\activate.bat" (
-    echo Виртуальное окружение не найдено! Сначала запустите install_kinect_env.bat
+    echo Virtual environment not found! Please run install.bat first.
     pause
     exit /b
 )

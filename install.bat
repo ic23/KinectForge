@@ -1,16 +1,16 @@
 @echo off
-:: UTF-8 для консоли
+:: Set console to UTF-8
 chcp 65001>nul
 
 echo ========================================
-echo Установка окружения Python 3.10 для Kinect 360
+echo Setting up Python 3.10 environment for KinectForge
 echo ========================================
 echo.
 
 set PYTHON_PATH=C:\Users\%USERNAME%\AppData\Local\Programs\Python\Python310\python.exe
 
 if not exist "%PYTHON_PATH%" (
-    echo Python не найден по пути: %PYTHON_PATH%
+    echo Python not found at: %PYTHON_PATH%
     pause
     exit /b
 )
@@ -18,15 +18,15 @@ if not exist "%PYTHON_PATH%" (
 "%PYTHON_PATH%" -m venv kinect_env
 call kinect_env\Scripts\activate.bat
 
-:: Обновляем pip
+:: Upgrade pip
 python -m pip install --upgrade pip
 
-:: Ставим библиотеки
+:: Install libraries
 pip install numpy opencv-python moderngl glfw imgui[glfw] pythonnet PyOpenGL PyOpenGL-accelerate
 
 echo ========================================
-echo Установка завершена!
-echo Перед запуском main.py установите Kinect SDK 1.8
+echo Setup completed!
+echo Before running main.py, install Kinect SDK 1.8
 echo https://www.microsoft.com/en-us/download/details.aspx?id=40278
 echo ========================================
 echo.
